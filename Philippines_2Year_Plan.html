@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philippines — 2-Year Strategic Plan FY2027–FY2028 | Solarvest</title>
+<style>
+  :root {
+    --teal: #1A6B72;
+    --teal-light: #2A9BA5;
+    --teal-pale: #E8F4F5;
+    --green: #2E7D52;
+    --green-light: #3D9B6A;
+    --green-pale: #E8F4ED;
+    --navy: #1E2A3A;
+    --gold: #C8921A;
+    --gold-pale: #FEF3CD;
+    --red: #C0392B;
+    --red-pale: #FDEDEB;
+    --orange: #D35400;
+    --orange-pale: #FEF0E6;
+    --purple: #6C3483;
+    --purple-pale: #F2E6F9;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-400: #94A3B8;
+    --gray-600: #475569;
+    --gray-800: #1E293B;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-800);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2A3D57 50%, var(--teal) 100%);
+    padding: 32px 48px 28px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header::after {
+    content: '';
+    position: absolute; bottom: -40px; right: 120px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .header-flag { font-size: 28px; margin-bottom: 4px; }
+  .header-title {
+    font-size: 26px; font-weight: 700; letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+  .header-subtitle {
+    font-size: 13px; color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+  }
+  .header-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 4px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: 600; color: white;
+    backdrop-filter: blur(4px);
+  }
+  .badge.priority { background: rgba(200, 146, 26, 0.4); border-color: rgba(200,146,26,0.6); }
+  .badge.status { background: rgba(46, 125, 82, 0.4); border-color: rgba(46,125,82,0.6); }
+
+  /* ─── KPI STRIP ─── */
+  .kpi-strip {
+    background: white;
+    border-bottom: 2px solid var(--gray-200);
+    display: flex;
+    overflow-x: auto;
+  }
+  .kpi-item {
+    flex: 1; min-width: 140px;
+    padding: 14px 20px;
+    text-align: center;
+    border-right: 1px solid var(--gray-200);
+  }
+  .kpi-item:last-child { border-right: none; }
+  .kpi-label { font-size: 10px; font-weight: 600; text-transform: uppercase; color: var(--gray-600); letter-spacing: 0.5px; margin-bottom: 4px; }
+  .kpi-value { font-size: 20px; font-weight: 700; color: var(--navy); }
+  .kpi-sub { font-size: 11px; color: var(--gray-600); margin-top: 2px; }
+  .kpi-item.highlight .kpi-value { color: var(--teal); }
+  .kpi-item.highlight2 .kpi-value { color: var(--green); }
+
+  /* ─── TAB NAV ─── */
+  .tab-nav {
+    background: white;
+    border-bottom: 2px solid var(--gray-200);
+    display: flex;
+    padding: 0 32px;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .tab-btn {
+    padding: 14px 20px;
+    font-size: 13px; font-weight: 600;
+    color: var(--gray-600);
+    border: none; background: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--teal); }
+  .tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+  /* ─── CONTENT ─── */
+  .tab-content { display: none; padding: 32px 48px; max-width: 1200px; margin: 0 auto; }
+  .tab-content.active { display: block; }
+
+  /* ─── SECTION HEADERS ─── */
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px;
+  }
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .section-icon.teal { background: var(--teal-pale); }
+  .section-icon.green { background: var(--green-pale); }
+  .section-icon.gold { background: var(--gold-pale); }
+  .section-icon.purple { background: var(--purple-pale); }
+  .section-title { font-size: 18px; font-weight: 700; color: var(--navy); }
+  .section-desc { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+
+  /* ─── GRID ─── */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
+  .grid-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 24px; }
+
+  /* ─── CARDS ─── */
+  .card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+  }
+  .card-header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .card-title { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .card-body { padding: 20px; }
+  .card.teal .card-header { background: var(--teal-pale); border-bottom-color: rgba(26,107,114,0.15); }
+  .card.teal .card-title { color: var(--teal); }
+  .card.green .card-header { background: var(--green-pale); border-bottom-color: rgba(46,125,82,0.15); }
+  .card.green .card-title { color: var(--green); }
+  .card.gold .card-header { background: var(--gold-pale); border-bottom-color: rgba(200,146,26,0.15); }
+  .card.gold .card-title { color: var(--gold); }
+  .card.navy .card-header { background: var(--navy); }
+  .card.navy .card-title { color: white; }
+
+  /* ─── STREAM CARDS ─── */
+  .stream-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .stream-header {
+    padding: 20px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .stream-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .stream-tag {
+    display: inline-block;
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 4px;
+  }
+  .stream-name { font-size: 17px; font-weight: 700; color: var(--navy); }
+  .stream-meta { font-size: 12px; color: var(--gray-600); }
+  .stream-body { padding: 0 24px 24px; }
+  .stream-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+
+  .year-box {
+    background: var(--gray-50);
+    border-radius: 10px;
+    border: 1px solid var(--gray-200);
+    padding: 16px;
+  }
+  .year-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .year-badge {
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase;
+  }
+  .year-badge.invest { background: var(--orange-pale); color: var(--orange); }
+  .year-badge.deliver { background: var(--green-pale); color: var(--green); }
+  .year-badge.seed { background: var(--gold-pale); color: var(--gold); }
+  .year-badge.explore { background: var(--purple-pale); color: var(--purple); }
+
+  .detail-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 12px;
+  }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-label { color: var(--gray-600); flex: 1; }
+  .detail-value { font-weight: 600; color: var(--gray-800); text-align: right; flex-shrink: 0; margin-left: 8px; }
+  .detail-value.highlight { color: var(--teal); }
+  .detail-value.green { color: var(--green); }
+  .detail-value.orange { color: var(--orange); }
+  .detail-value.gold { color: var(--gold); }
+
+  /* ─── REVENUE TABLE ─── */
+  .rev-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .rev-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .rev-table th.right { text-align: right; }
+  .rev-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+  .rev-table tr:hover td { background: var(--gray-50); }
+  .rev-table td.right { text-align: right; font-weight: 600; }
+  .rev-table td.label { color: var(--gray-600); font-size: 12px; padding-top: 12px; padding-bottom: 2px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; background: var(--gray-50); }
+  .rev-table tr.total td {
+    background: var(--teal-pale);
+    font-weight: 700;
+    font-size: 14px;
+    border-top: 2px solid var(--teal);
+    color: var(--teal);
+  }
+  .rev-table tr.subtotal td {
+    background: var(--gray-100);
+    font-weight: 600;
+    font-size: 12px;
+    border-top: 1px solid var(--gray-200);
+  }
+  .rev-table tr.invest-row td {
+    background: var(--orange-pale);
+    color: var(--orange);
+    font-weight: 600;
+  }
+  .rev-table tr.invest-total td {
+    background: #FEE2D5;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--orange);
+    border-top: 2px solid var(--orange);
+  }
+  .rev-table tr.net-row td {
+    background: var(--green-pale);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--green);
+    border-top: 2px solid var(--green);
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline-wrapper { overflow-x: auto; padding-bottom: 8px; }
+  .timeline-grid {
+    min-width: 800px;
+    display: grid;
+    grid-template-columns: 180px repeat(8, 1fr);
+    gap: 0;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+  }
+  .tg-header {
+    background: var(--navy);
+    color: white;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .tg-header:first-child { text-align: left; }
+  .tg-fy-header {
+    background: var(--teal);
+    color: white;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    grid-column: span 4;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .tg-row-label {
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-800);
+    border-right: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tg-cell {
+    padding: 8px 6px;
+    border-right: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 10px;
+    text-align: center;
+    color: var(--gray-600);
+    position: relative;
+    min-height: 42px;
+  }
+  .tg-cell.active {
+    background: var(--teal-pale);
+  }
+  .tg-cell.active-green { background: var(--green-pale); }
+  .tg-cell.active-gold { background: var(--gold-pale); }
+  .tg-cell.active-orange { background: var(--orange-pale); }
+  .tg-milestone {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 9px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin: 1px;
+  }
+  .tg-milestone.green { background: var(--green); }
+  .tg-milestone.gold { background: var(--gold); }
+  .tg-milestone.orange { background: var(--orange); }
+  .tg-milestone.navy { background: var(--navy); }
+  .tg-section-label {
+    background: var(--gray-100);
+    grid-column: 1 / -1;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gray-600);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  /* ─── RISKS ─── */
+  .risk-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .risk-table th {
+    background: var(--navy);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .risk-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+  .risk-table tr:hover td { background: var(--gray-50); }
+  .risk-badge {
+    display: inline-block;
+    padding: 3px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .risk-high { background: var(--red-pale); color: var(--red); }
+  .risk-medium { background: var(--orange-pale); color: var(--orange); }
+  .risk-low { background: var(--green-pale); color: var(--green); }
+
+  /* ─── STRUCTURE ─── */
+  .structure-box {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .structure-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .party-box {
+    background: white;
+    border-radius: 8px;
+    border: 2px solid var(--teal);
+    padding: 10px 16px;
+    text-align: center;
+    flex: 1;
+  }
+  .party-box.bayanwest { border-color: var(--green); }
+  .party-name { font-size: 12px; font-weight: 700; color: var(--navy); }
+  .party-legal { font-size: 11px; color: var(--gray-600); }
+  .party-economic { font-size: 13px; font-weight: 700; margin-top: 4px; }
+  .party-economic.teal { color: var(--teal); }
+  .party-economic.green { color: var(--green); }
+  .vs-arrow { font-size: 18px; color: var(--gray-400); }
+  .jv-node {
+    text-align: center; padding: 10px; margin: 8px 0;
+    background: var(--navy);
+    color: white;
+    border-radius: 10px;
+    font-weight: 700; font-size: 13px;
+  }
+  .jv-sub { font-size: 10px; font-weight: 400; opacity: 0.7; }
+
+  /* ─── STAT BOXES ─── */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-box {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--gray-200);
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .stat-icon { font-size: 20px; margin-bottom: 4px; }
+  .stat-value { font-size: 18px; font-weight: 700; color: var(--navy); }
+  .stat-label { font-size: 11px; color: var(--gray-600); margin-top: 2px; }
+  .stat-box.teal { border-color: var(--teal); background: var(--teal-pale); }
+  .stat-box.teal .stat-value { color: var(--teal); }
+  .stat-box.green { border-color: var(--green); background: var(--green-pale); }
+  .stat-box.green .stat-value { color: var(--green); }
+  .stat-box.gold { border-color: var(--gold); background: var(--gold-pale); }
+  .stat-box.gold .stat-value { color: var(--gold); }
+  .stat-box.orange { border-color: var(--orange); background: var(--orange-pale); }
+  .stat-box.orange .stat-value { color: var(--orange); }
+
+  /* ─── ASK SECTION ─── */
+  .ask-card {
+    background: linear-gradient(135deg, var(--navy) 0%, #2A3D57 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .ask-title { font-size: 16px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .ask-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .ask-item {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .ask-number {
+    font-size: 28px; font-weight: 800; color: var(--teal-light);
+    line-height: 1; margin-bottom: 6px;
+  }
+  .ask-label { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+  .ask-detail { font-size: 11px; color: rgba(255,255,255,0.7); line-height: 1.4; }
+
+  /* ─── DISCLAIMER ─── */
+  .disclaimer {
+    background: var(--gold-pale);
+    border: 1px solid rgba(200,146,26,0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 11px;
+    color: #7A5800;
+    margin-bottom: 20px;
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider { border: none; border-top: 1px solid var(--gray-200); margin: 24px 0; }
+
+  /* ─── FOOTNOTE ─── */
+  .footnote { font-size: 11px; color: var(--gray-400); margin-top: 8px; font-style: italic; }
+
+  @media (max-width: 700px) {
+    .tab-content { padding: 20px 16px; }
+    .grid-3, .grid-2, .grid-2-1 { grid-template-columns: 1fr; }
+    .stream-cols { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .ask-items { grid-template-columns: 1fr; }
+    .header { padding: 20px 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<div class="header">
+  <div class="header-flag">🇵🇭</div>
+  <div class="header-title">Philippines — 2-Year Strategic Plan</div>
+  <div class="header-subtitle">FY2027 (Apr 2026 – Mar 2027) &amp; FY2028 (Apr 2027 – Mar 2028) · Solarvest Overseas Markets</div>
+  <div class="header-badges">
+    <span class="badge priority">🚀 ACCELERATE Priority</span>
+    <span class="badge status">✅ 3 Business Streams</span>
+    <span class="badge">JV + SPV + PPP</span>
+    <span class="badge">Prepared: April 2026</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     KPI STRIP
+═══════════════════════════════════════════════════════ -->
+<div class="kpi-strip">
+  <div class="kpi-item">
+    <div class="kpi-label">FY27 Revenue Target</div>
+    <div class="kpi-value">RM 42.6M</div>
+    <div class="kpi-sub">Solarvest 65% (C&amp;I+Resi)</div>
+  </div>
+  <div class="kpi-item highlight">
+    <div class="kpi-label">FY28 Revenue Target</div>
+    <div class="kpi-value">RM 55–70M</div>
+    <div class="kpi-sub">Solarvest attributable</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-label">Business Streams</div>
+    <div class="kpi-value">3</div>
+    <div class="kpi-sub">JV · SPV · PPP</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-label">Rooftop JV Target</div>
+    <div class="kpi-value">PHP 875M</div>
+    <div class="kpi-sub">FY27 full-year target</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-label">Utility Pipeline</div>
+    <div class="kpi-value">75 MWp</div>
+    <div class="kpi-sub">Acquisition FY27</div>
+  </div>
+  <div class="kpi-item highlight2">
+    <div class="kpi-label">La Mesa Opportunity</div>
+    <div class="kpi-value">1 GWp</div>
+    <div class="kpi-sub">2,700 ha · PPP</div>
+  </div>
+  <div class="kpi-item">
+    <div class="kpi-label">Total FY27 Investment</div>
+    <div class="kpi-value">~RM 16M</div>
+    <div class="kpi-sub">Capex + working capital</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     TAB NAV
+═══════════════════════════════════════════════════════ -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab('overview')">📋 Overview</button>
+  <button class="tab-btn" onclick="switchTab('jv')">🏘️ Bayanwest JV</button>
+  <button class="tab-btn" onclick="switchTab('spv')">⚡ Utility SPV</button>
+  <button class="tab-btn" onclick="switchTab('lamesa')">💧 La Mesa Dam</button>
+  <button class="tab-btn" onclick="switchTab('financials')">💰 P&amp;L Summary</button>
+  <button class="tab-btn" onclick="switchTab('timeline')">📅 Milestones</button>
+  <button class="tab-btn" onclick="switchTab('risks')">⚠️ Risks</button>
+  <button class="tab-btn" onclick="switchTab('org')">🏢 Org Chart</button>
+  <button class="tab-btn" onclick="switchTab('ask')">🎯 MD Ask</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 1: OVERVIEW
+══════════════════════════════════════════════════════ -->
+<div id="tab-overview" class="tab-content active">
+
+  <div class="disclaimer">
+    ⚠️ <span><strong>Working Document — April 2026.</strong> All financial projections are estimates based on early-stage discussions. Revenue numbers to be validated with local BU and finance team before formal AOP submission.</span>
+  </div>
+
+  <div class="section-header">
+    <div class="section-icon teal">🇵🇭</div>
+    <div>
+      <div class="section-title">Why Philippines is Priority #1</div>
+      <div class="section-desc">The market with the highest near-term probability of material revenue</div>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-header" style="background:var(--teal-pale);"><span class="card-title" style="color:var(--teal);">🤝 Strongest Partnership</span></div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--gray-600);line-height:1.6;">Bayanwest partnership (Paul) with active pipeline and local government connections. MD-endorsed at April 21 meeting. Clear appetite to move fast.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:var(--green-pale);"><span class="card-title" style="color:var(--green);">⚡ Clearest Revenue Path</span></div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--gray-600);line-height:1.6;">Rooftop C&amp;I + residential volume at PHP 875M/year is a proven model. First installations can begin within 3–4 months of JVco registration.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:var(--gold-pale);"><span class="card-title" style="color:var(--gold);">🌊 Transformative Upside</span></div>
+      <div class="card-body">
+        <p style="font-size:12px;color:var(--gray-600);line-height:1.6;">La Mesa Dam (1 GWp floating solar) is the largest single opportunity in Solarvest's history. Even at early-stage, USD 500K positions Solarvest for landmark PPP award.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:8px;">
+    <div class="section-icon green">📊</div>
+    <div>
+      <div class="section-title">Three-Stream Architecture</div>
+      <div class="section-desc">Philippines operates via three distinct legal vehicles, each with different risk/return profiles</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">
+
+    <div class="card" style="border-top:4px solid var(--teal);">
+      <div class="card-header"><span class="card-title">Stream 1 · Bayanwest JV</span><span style="font-size:18px;">🏘️</span></div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Vehicle</span><span class="detail-value">JVco (new entity)</span></div>
+        <div class="detail-row"><span class="detail-label">Solarvest stake</span><span class="detail-value highlight">40% legal / 65% econ</span></div>
+        <div class="detail-row"><span class="detail-label">Segment</span><span class="detail-value">C&amp;I + Residential rooftop</span></div>
+        <div class="detail-row"><span class="detail-label">FY27 target</span><span class="detail-value highlight">PHP 875M (full year)</span></div>
+        <div class="detail-row"><span class="detail-label">FY28 target</span><span class="detail-value green">PHP 962.5M (+10%)</span></div>
+        <div class="detail-row"><span class="detail-label">Risk profile</span><span class="detail-value" style="color:var(--green);">Medium</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:4px solid var(--orange);">
+      <div class="card-header"><span class="card-title">Stream 2 · Utility SPV</span><span style="font-size:18px;">⚡</span></div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Vehicle</span><span class="detail-value">New SPV (Solarvest majority)</span></div>
+        <div class="detail-row"><span class="detail-label">Model</span><span class="detail-value highlight">Develop → Flip RTB + EPC</span></div>
+        <div class="detail-row"><span class="detail-label">FY27 pipeline</span><span class="detail-value">75 MWp acquisition</span></div>
+        <div class="detail-row"><span class="detail-label">FY27 investment</span><span class="detail-value orange">USD 2.25M (≈ RM 10M)</span></div>
+        <div class="detail-row"><span class="detail-label">FY28 revenue</span><span class="detail-value green">RM 25–35M (dev fee + EPC)</span></div>
+        <div class="detail-row"><span class="detail-label">Risk profile</span><span class="detail-value orange">Medium-High</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="border-top:4px solid var(--purple);">
+      <div class="card-header"><span class="card-title">Stream 3 · La Mesa PPP</span><span style="font-size:18px;">💧</span></div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Vehicle</span><span class="detail-value">New SPV (Solarvest majority)</span></div>
+        <div class="detail-row"><span class="detail-label">Size</span><span class="detail-value">~1 GWp floating solar</span></div>
+        <div class="detail-row"><span class="detail-label">Site</span><span class="detail-value">La Mesa Dam, 2,700 ha</span></div>
+        <div class="detail-row"><span class="detail-label">Counterparty</span><span class="detail-value">MWSS (govt agency)</span></div>
+        <div class="detail-row"><span class="detail-label">FY27 upfront</span><span class="detail-value orange">USD 500K (≈ RM 2.25M)</span></div>
+        <div class="detail-row"><span class="detail-label">FY28 revenue</span><span class="detail-value" style="color:var(--purple);">Dev milestone (TBD)</span></div>
+        <div class="detail-row"><span class="detail-label">Risk profile</span><span class="detail-value" style="color:var(--red);">High (PPP timeline uncertain)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-icon gold">📈</div>
+    <div>
+      <div class="section-title">FY27 vs FY28 — At a Glance</div>
+      <div class="section-desc">FY27 = invest &amp; build. FY28 = execute &amp; harvest.</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div style="background:var(--teal-pale);border:1px solid rgba(26,107,114,0.2);border-radius:12px;padding:20px;">
+      <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:12px;">FY2027 — Execution Year</div>
+      <div style="font-size:12px;color:var(--gray-700);line-height:1.8;">
+        ✅ JVco registration &amp; legal finalization (Q1 critical path)<br>
+        ✅ C&amp;I + Residential fully executing by Q2<br>
+        ✅ 75 MWp utility sites identified &amp; secured<br>
+        ✅ La Mesa PPP — MWSS engagement &amp; deposit<br>
+        ✅ Philippines team fully operational<br>
+        ✅ JVco first EPC contracts awarded<br><br>
+        <strong style="color:var(--teal);">Revenue: RM 42.6M (Solarvest 65% attributable)</strong><br>
+        <strong style="color:var(--orange);">Investment: ~RM 16M</strong>
+      </div>
+    </div>
+    <div style="background:var(--green-pale);border:1px solid rgba(46,125,82,0.2);border-radius:12px;padding:20px;">
+      <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:12px;">FY2028 — Delivery Year</div>
+      <div style="font-size:12px;color:var(--gray-700);line-height:1.8;">
+        🚀 Bayanwest JV at 75–100% of PHP 875M target<br>
+        🚀 First utility projects flip to RTB (25–30 MWp)<br>
+        🚀 EPC construction begins on flipped projects<br>
+        🚀 La Mesa PPP award (if timeline holds)<br>
+        🚀 Philippines self-sustaining, contributes to PAT<br><br>
+        <strong style="color:var(--green);">Revenue: RM 55–70M (Solarvest attributable)</strong><br>
+        <strong style="color:var(--orange);">Investment: ~RM 18–22M (further development)</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 2: BAYANWEST JV
+══════════════════════════════════════════════════════ -->
+<div id="tab-jv" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon teal">🤝</div>
+    <div>
+      <div class="section-title">Bayanwest JV — Rooftop C&amp;I + Residential</div>
+      <div class="section-desc">Joint venture for C&amp;I and residential rooftop solar across the Philippines</div>
+    </div>
+  </div>
+
+  <!-- Ownership structure -->
+  <div class="structure-box" style="margin-bottom:20px;">
+    <div style="font-size:12px;font-weight:700;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;">Ownership Structure</div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:8px;align-items:center;">
+      <div class="party-box">
+        <div class="party-name">☀️ Solarvest</div>
+        <div class="party-legal">Legal: 40%</div>
+        <div class="party-economic teal">Economic: 65%</div>
+        <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">Technical expertise, brand, EPC capability</div>
+      </div>
+      <div style="text-align:center;color:var(--gray-400);font-size:22px;font-weight:300;">⟷</div>
+      <div class="party-box bayanwest">
+        <div class="party-name">🇵🇭 Bayanwest</div>
+        <div class="party-legal">Legal: 60%</div>
+        <div class="party-economic green">Economic: 35%</div>
+        <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">Local relationships, government access, Paul (PIC)</div>
+      </div>
+    </div>
+    <div class="jv-node" style="margin-top:12px;">
+      JVco (New Entity)
+      <div class="jv-sub">Rooftop C&amp;I + Residential · Philippines</div>
+    </div>
+    <div style="font-size:11px;color:var(--gray-600);margin-top:8px;">
+      ⚠️ Higher economic interest (65%) for Solarvest reflects IP, EPC capability, and brand premium despite minority legal shareholding. Structure to be finalized with legal counsel.
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-header" style="background:var(--teal-pale);"><span class="card-title" style="color:var(--teal);">📋 JVco Business Plan (Bayanwest Proposal)</span></div>
+        <div class="card-body">
+          <div class="detail-row"><span class="detail-label">C&amp;I target (full year)</span><span class="detail-value">PHP 700M (≈ RM 52.5M)</span></div>
+          <div class="detail-row"><span class="detail-label">Residential target (full year)</span><span class="detail-value">PHP 175M (≈ RM 13.1M)</span></div>
+          <div class="detail-row"><span class="detail-label">Total steady-state target</span><span class="detail-value highlight">PHP 875M (≈ RM 65.6M)</span></div>
+          <div class="detail-row"><span class="detail-label">Solarvest 65% share</span><span class="detail-value green">≈ RM 42.6M/year</span></div>
+          <div class="detail-row"><span class="detail-label">Headcount (JVco)</span><span class="detail-value">17 staff</span></div>
+          <div class="detail-row"><span class="detail-label">Breakeven estimate</span><span class="detail-value">FY28 Q1–Q2</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" style="background:var(--green-pale);"><span class="card-title" style="color:var(--green);">👥 Headcount Plan (17 staff)</span></div>
+        <div class="card-body">
+          <div class="detail-row"><span class="detail-label">Management (GM, Operations, Finance)</span><span class="detail-value">3</span></div>
+          <div class="detail-row"><span class="detail-label">Sales / BD</span><span class="detail-value">4</span></div>
+          <div class="detail-row"><span class="detail-label">Project Engineering</span><span class="detail-value">4 ⚠️</span></div>
+          <div class="detail-row"><span class="detail-label">Procurement / Supply Chain</span><span class="detail-value">2</span></div>
+          <div class="detail-row"><span class="detail-label">Installation / Technical</span><span class="detail-value">2</span></div>
+          <div class="detail-row"><span class="detail-label">Admin / HR / Finance Support</span><span class="detail-value">2</span></div>
+          <div style="font-size:11px;color:var(--orange);margin-top:8px;padding:6px 8px;background:var(--orange-pale);border-radius:6px;">
+            ⚠️ 4 project engineers flagged as potentially insufficient at full PHP 875M volume. Recommend stress-testing workload capacity before FY28 ramp.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card-header" style="background:var(--navy);"><span class="card-title" style="color:white;">📅 FY27 vs FY28 — Revenue &amp; Profitability</span></div>
+        <div class="card-body">
+          <div style="margin-bottom:16px;">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--gray-600);margin-bottom:8px;">FY2027 — Full Year Target</div>
+            <div class="detail-row"><span class="detail-label">C&amp;I revenue (40 projects)</span><span class="detail-value highlight">PHP 700M</span></div>
+            <div class="detail-row"><span class="detail-label">Residential revenue (1,000 projects)</span><span class="detail-value highlight">PHP 175M</span></div>
+            <div class="detail-row"><span class="detail-label">Total JVco revenue</span><span class="detail-value highlight">PHP 875M ≈ RM 65.6M</span></div>
+            <div class="detail-row"><span class="detail-label">JVco PAT target</span><span class="detail-value green">USD 820K ≈ RM 3.7M</span></div>
+            <div class="detail-row"><span class="detail-label">PAT margin</span><span class="detail-value">~5.3%</span></div>
+            <div class="detail-row" style="background:var(--teal-pale);border-radius:6px;padding:6px 8px;margin-top:4px;"><span class="detail-label"><strong>Solarvest 65% revenue</strong></span><span class="detail-value highlight"><strong>RM 42.6M</strong></span></div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--gray-600);margin-bottom:8px;">FY2028 — Growth Year (+10% Rev / +5% OPEX)</div>
+            <div class="detail-row"><span class="detail-label">Total JVco revenue</span><span class="detail-value green">PHP 962.5M ≈ RM 72.2M</span></div>
+            <div class="detail-row"><span class="detail-label">OPEX increment</span><span class="detail-value">+5% only (vs +10% revenue)</span></div>
+            <div class="detail-row"><span class="detail-label">Estimated JVco PAT</span><span class="detail-value green">~USD 1.0M ≈ RM 4.5M</span></div>
+            <div class="detail-row"><span class="detail-label">Estimated PAT margin</span><span class="detail-value green">~6.2% (margin expansion)</span></div>
+            <div class="detail-row" style="background:var(--green-pale);border-radius:6px;padding:6px 8px;margin-top:4px;"><span class="detail-label"><strong>Solarvest 65% revenue</strong></span><span class="detail-value green"><strong>RM 47.0M</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:8px;">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;">📊 Solarvest Revenue Attribution (65% Economic Interest)</div>
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="right">FY2027</th>
+          <th class="right">FY2028</th>
+          <th class="right">Steady State (Full Year)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>JVco Total Revenue (PHP M)</td><td class="right">PHP 100M</td><td class="right">PHP 675M</td><td class="right">PHP 875M</td></tr>
+        <tr><td>JVco Total Revenue (RM M)</td><td class="right">RM 7.5M</td><td class="right">RM 50.6M</td><td class="right">RM 65.6M</td></tr>
+        <tr><td>Solarvest 65% Economic Share</td><td class="right">RM 4.9M</td><td class="right">RM 32.9M</td><td class="right">RM 42.6M</td></tr>
+        <tr><td class="label" colspan="4">Key Assumptions</td></tr>
+        <tr><td style="font-size:11px;color:var(--gray-600);">PHP/MYR exchange rate</td><td class="right" colspan="3" style="font-size:11px;color:var(--gray-600);">1 PHP ≈ RM 0.075</td></tr>
+        <tr><td style="font-size:11px;color:var(--gray-600);">Revenue recognition basis</td><td class="right" colspan="3" style="font-size:11px;color:var(--gray-600);">EPC completion / project handover milestones</td></tr>
+        <tr><td style="font-size:11px;color:var(--gray-600);">Consolidation method</td><td class="right" colspan="3" style="font-size:11px;color:var(--gray-600);">Equity accounting (40% legal) — validate with Group Finance</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 3: UTILITY SPV
+══════════════════════════════════════════════════════ -->
+<div id="tab-spv" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--orange-pale);">⚡</div>
+    <div>
+      <div class="section-title">Utility Scale Asset SPV — 75 MWp Greenfield Pipeline</div>
+      <div class="section-desc">Develop greenfield/brownfield projects to Ready-to-Build (RTB), flip to investor fund, earn development fee + EPC contract</div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box orange">
+      <div class="stat-icon">🎯</div>
+      <div class="stat-value">75 MWp</div>
+      <div class="stat-label">FY27 acquisition target</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon">💵</div>
+      <div class="stat-value">USD 30/kWp</div>
+      <div class="stat-label">Acquisition cost (FY27)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon">💵</div>
+      <div class="stat-value">USD 50/kWp</div>
+      <div class="stat-label">Further dev cost (FY28)</div>
+    </div>
+    <div class="stat-box teal">
+      <div class="stat-icon">🔄</div>
+      <div class="stat-value">Dev Fee + EPC</div>
+      <div class="stat-label">Revenue model</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header" style="background:var(--orange-pale);"><span class="card-title" style="color:var(--orange);">🔄 Revenue Model — How Solarvest Earns</span></div>
+      <div class="card-body">
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:12px;">
+          <div style="background:var(--gray-50);border-left:3px solid var(--orange);padding:10px 12px;border-radius:0 6px 6px 0;">
+            <strong>Step 1 — Acquire</strong><br>
+            <span style="color:var(--gray-600);">Identify greenfield/brownfield sites. Secure land rights, grid interconnection study, preliminary permits. Cost: USD 30/kWp in FY27.</span>
+          </div>
+          <div style="background:var(--gray-50);border-left:3px solid var(--gold);padding:10px 12px;border-radius:0 6px 6px 0;">
+            <strong>Step 2 — Develop to RTB</strong><br>
+            <span style="color:var(--gray-600);">Full permits, EIA clearance, grid connection approval, PPA/offtake agreement, bankable project documents. Additional USD 20/kWp in FY28.</span>
+          </div>
+          <div style="background:var(--gray-50);border-left:3px solid var(--teal);padding:10px 12px;border-radius:0 6px 6px 0;">
+            <strong>Step 3 — Flip to Investor</strong><br>
+            <span style="color:var(--gray-600);">Sell RTB project rights to a fund/investor at premium to development cost. Earn development fee (~5–8% of total project value).</span>
+          </div>
+          <div style="background:var(--green-pale);border-left:3px solid var(--green);padding:10px 12px;border-radius:0 6px 6px 0;">
+            <strong>Step 4 — Back-in EPC</strong><br>
+            <span style="color:var(--gray-600);">As condition of the flip, Solarvest is awarded the EPC contract. Construction begins, generating core EPC revenue stream.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-header"><span class="card-title">📅 FY2027 — Acquisition Phase</span></div>
+        <div class="card-body">
+          <div class="year-label"><span class="year-badge invest">INVEST</span> April 2026 – March 2027</div>
+          <div class="detail-row"><span class="detail-label">Target pipeline</span><span class="detail-value">75 MWp identified &amp; secured</span></div>
+          <div class="detail-row"><span class="detail-label">Acquisition cost</span><span class="detail-value orange">USD 2.25M ≈ RM 10.1M</span></div>
+          <div class="detail-row"><span class="detail-label">Revenue</span><span class="detail-value">RM 0 (pre-revenue stage)</span></div>
+          <div class="detail-row"><span class="detail-label">Activities</span><span class="detail-value" style="text-align:right;font-size:11px;">Site ID · Land banking · Grid study · Prelim permits</span></div>
+          <div class="detail-row"><span class="detail-label">Key milestone</span><span class="detail-value highlight">75 MWp secured by Q4 FY27</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" style="background:var(--green-pale);"><span class="card-title" style="color:var(--green);">📅 FY2028 — Development &amp; First Flips</span></div>
+        <div class="card-body">
+          <div class="year-label"><span class="year-badge deliver">DELIVER</span> April 2027 – March 2028</div>
+          <div class="detail-row"><span class="detail-label">Further dev investment</span><span class="detail-value orange">USD 3.75M ≈ RM 16.9M</span></div>
+          <div class="detail-row"><span class="detail-label">First tranche RTB</span><span class="detail-value">25–30 MWp (fastest projects)</span></div>
+          <div class="detail-row"><span class="detail-label">Development fee on flip</span><span class="detail-value highlight">≈ USD 1.2M ≈ RM 5.4M</span></div>
+          <div class="detail-row"><span class="detail-label">EPC contract awarded</span><span class="detail-value">25 MWp · USD ~17M total</span></div>
+          <div class="detail-row"><span class="detail-label">EPC revenue (FY28, partial)</span><span class="detail-value green">≈ RM 20–25M (25–30% progress)</span></div>
+          <div class="detail-row"><span class="detail-label">Total Stream 2 FY28</span><span class="detail-value green">RM 25–30M</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:8px;">
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>SPV Financials Summary</th>
+          <th class="right">FY2027</th>
+          <th class="right">FY2028</th>
+          <th class="right">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="label" colspan="4">Revenue</td></tr>
+        <tr><td>Development fee (flip)</td><td class="right">—</td><td class="right">≈ RM 5.4M</td><td class="right" style="font-size:11px;">~5% of 25 MWp project value</td></tr>
+        <tr><td>EPC contract (partial recognition)</td><td class="right">—</td><td class="right">≈ RM 22M</td><td class="right" style="font-size:11px;">25–30% of USD 17M on 25 MWp</td></tr>
+        <tr class="subtotal"><td><strong>Stream 2 Total Revenue</strong></td><td class="right"><strong>RM 0</strong></td><td class="right"><strong>≈ RM 27M</strong></td><td class="right"></td></tr>
+        <tr><td class="label" colspan="4">Investment (Capital Outlay)</td></tr>
+        <tr class="invest-row"><td>Site acquisition &amp; land banking</td><td class="right">USD 2.25M</td><td class="right">—</td><td class="right" style="font-size:11px;">USD 30/kWp × 75 MWp</td></tr>
+        <tr class="invest-row"><td>Development costs (permits, studies, PPA)</td><td class="right">—</td><td class="right">USD 3.75M</td><td class="right" style="font-size:11px;">USD 50/kWp × 75 MWp</td></tr>
+        <tr class="invest-total"><td><strong>Total SPV Investment</strong></td><td class="right"><strong>≈ RM 10.1M</strong></td><td class="right"><strong>≈ RM 16.9M</strong></td><td class="right"><strong>Cumulative: RM 27M</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="footnote">* EPC contract for remaining 50 MWp likely to be awarded in FY28/FY29 depending on construction pace. Full 75 MWp EPC value at USD 0.65/Wp = USD ~49M = RM 220M — this is the long-term EPC prize.</p>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 4: LA MESA DAM
+══════════════════════════════════════════════════════ -->
+<div id="tab-lamesa" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon" style="background:#E8F0FE;">💧</div>
+    <div>
+      <div class="section-title">La Mesa Dam — 1 GWp Floating Solar PPP</div>
+      <div class="section-desc">Transformative flagship opportunity. Largest single project opportunity in Solarvest's history.</div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#1E2A3A,#2A3D57);color:white;border-radius:14px;padding:24px;margin-bottom:24px;">
+    <div style="font-size:15px;font-weight:700;margin-bottom:16px;">💧 La Mesa Dam — The Opportunity</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.1);border-radius:8px;">
+        <div style="font-size:24px;font-weight:800;color:#2A9BA5;">~1 GWp</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Potential capacity</div>
+      </div>
+      <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.1);border-radius:8px;">
+        <div style="font-size:24px;font-weight:800;color:#3D9B6A;">2,700 ha</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Water surface area</div>
+      </div>
+      <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.1);border-radius:8px;">
+        <div style="font-size:24px;font-weight:800;color:#C8921A;">USD 500K</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Upfront to secure</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.8);line-height:1.7;">
+      La Mesa Dam, managed by MWSS (Metropolitan Waterworks and Sewerage System), has an approximate water surface that can accommodate ~1 GWp of floating photovoltaic solar. Bayanwest's Paul has an existing MWSS contact. The project would be structured as a Public Private Partnership (PPP) — Solarvest leads the bid with a new SPV (Solarvest majority, Bayanwest potential co-investor). USD 500K is required upfront to formally engage and secure preferential position before a competitive PPP process is launched.
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header"><span class="card-title">📋 Project Parameters</span></div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">La Mesa Dam, Quezon City area</span></div>
+        <div class="detail-row"><span class="detail-label">Water authority</span><span class="detail-value">MWSS (Metropolitan Waterworks)</span></div>
+        <div class="detail-row"><span class="detail-label">Capacity estimate</span><span class="detail-value">~1 GWp (1,000 MW)</span></div>
+        <div class="detail-row"><span class="detail-label">Technology</span><span class="detail-value">Floating PV solar</span></div>
+        <div class="detail-row"><span class="detail-label">Structure</span><span class="detail-value highlight">PPP (Public-Private Partnership)</span></div>
+        <div class="detail-row"><span class="detail-label">Bayanwest contact</span><span class="detail-value">Paul → MWSS (direct connection)</span></div>
+        <div class="detail-row"><span class="detail-label">Upfront commitment</span><span class="detail-value orange">USD 500K ≈ RM 2.25M</span></div>
+        <div class="detail-row"><span class="detail-label">Funding vehicle</span><span class="detail-value">New La Mesa SPV (Solarvest majority)</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><span class="card-title">💰 Revenue &amp; Economics</span></div>
+      <div class="card-body">
+        <div class="detail-row"><span class="detail-label">Total project value</span><span class="detail-value">USD ~700M–1B (1 GWp)</span></div>
+        <div class="detail-row"><span class="detail-label">EPC potential (Solarvest)</span><span class="detail-value green">USD ~650M ≈ RM 2.9B</span></div>
+        <div class="detail-row"><span class="detail-label">Development fee (flip)</span><span class="detail-value">USD 30–50M (5% dev fee)</span></div>
+        <div class="detail-row"><span class="detail-label">Revenue recognition</span><span class="detail-value">FY28 milestone / PPP award</span></div>
+        <div class="detail-row"><span class="detail-label">Construction start</span><span class="detail-value">FY29 earliest (optimistic)</span></div>
+        <div style="margin-top:10px;padding:8px;background:var(--gold-pale);border-radius:6px;font-size:11px;color:#7A5800;">
+          ⚠️ <strong>Note:</strong> Revenue from La Mesa is <strong>NOT included</strong> in the FY27/FY28 base projections due to PPP timeline uncertainty. This is bonus/upside — any milestone payment in FY28 would be additive.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:8px;">
+    <div class="card-header" style="background:var(--navy);"><span class="card-title" style="color:white;">📅 La Mesa Dam — PPP Journey &amp; Key Gates</span></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px;">
+        <div style="text-align:center;padding:12px;background:var(--orange-pale);border-radius:8px;border:1px solid rgba(211,84,0,0.2);">
+          <div style="font-size:11px;font-weight:700;color:var(--orange);">FY27 Q1–Q2</div>
+          <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">Initial engagement · Paul intro to MWSS · USD 500K deposit · NDA &amp; MOU</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--gold-pale);border-radius:8px;border:1px solid rgba(200,146,26,0.2);">
+          <div style="font-size:11px;font-weight:700;color:var(--gold);">FY27 Q3–Q4</div>
+          <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">Technical feasibility · Floating solar study · Grid impact assessment</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--teal-pale);border-radius:8px;border:1px solid rgba(26,107,114,0.2);">
+          <div style="font-size:11px;font-weight:700;color:var(--teal);">FY28 Q1–Q2</div>
+          <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">PPP bid submission · Financial model · Competitive process (if any)</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--green-pale);border-radius:8px;border:1px solid rgba(46,125,82,0.2);">
+          <div style="font-size:11px;font-weight:700;color:var(--green);">FY28 Q3–Q4</div>
+          <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">PPP award (target) · Development agreement signed · SPV funded</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:var(--gray-100);border-radius:8px;border:1px solid var(--gray-200);">
+          <div style="font-size:11px;font-weight:700;color:var(--gray-600);">FY29+</div>
+          <div style="font-size:10px;color:var(--gray-600);margin-top:4px;">EPC construction · Phased 1 GWp build-out over 3–5 years</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--gray-600);padding:8px;background:var(--gray-50);border-radius:6px;">
+        <strong>Critical dependencies:</strong> MWSS board approval for PPP structure · DOE interconnection policy for large-scale floating solar · Philippine PPP Centre endorsement · Regulatory clearance on La Mesa as water source protection zone.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 5: FINANCIALS
+══════════════════════════════════════════════════════ -->
+<div id="tab-financials" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon gold">💰</div>
+    <div>
+      <div class="section-title">Philippines — Consolidated P&amp;L Summary</div>
+      <div class="section-desc">FY2027 vs FY2028 across all three business streams (Solarvest attributable)</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <span>All figures are <strong>management estimates</strong> for planning purposes. Exchange rates: USD/MYR 4.50, PHP/MYR 0.075. Revenue recognition basis and consolidation treatment (JV equity accounting vs consolidation) to be confirmed with Group Finance.</span>
+  </div>
+
+  <table class="rev-table" style="margin-bottom:24px;">
+    <thead>
+      <tr>
+        <th style="width:35%;">Revenue Stream</th>
+        <th class="right" style="width:20%;">FY2027 (RM M)</th>
+        <th class="right" style="width:20%;">FY2028 (RM M)</th>
+        <th class="right" style="width:25%;">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="label" colspan="4">Stream 1 — Bayanwest JV (Rooftop)</td></tr>
+      <tr><td>JVco Total Revenue (100%)</td><td class="right">RM 7.5M</td><td class="right">RM 50.6M</td><td class="right" style="font-size:11px;">PHP 100M / PHP 675M</td></tr>
+      <tr><td>Solarvest 65% economic share</td><td class="right"><strong>RM 4.9M</strong></td><td class="right"><strong>RM 32.9M</strong></td><td class="right" style="font-size:11px;">Attribution only</td></tr>
+      <tr><td class="label" colspan="4">Stream 2 — Utility Scale SPV</td></tr>
+      <tr><td>Development fee (RTB flip)</td><td class="right">—</td><td class="right">RM 5.4M</td><td class="right" style="font-size:11px;">25 MWp @ ~5% dev fee</td></tr>
+      <tr><td>EPC contract (partial construction)</td><td class="right">—</td><td class="right">RM 21.6M</td><td class="right" style="font-size:11px;">~25% progress on 25 MWp</td></tr>
+      <tr><td>Stream 2 Subtotal</td><td class="right"><strong>—</strong></td><td class="right"><strong>RM 27.0M</strong></td><td class="right" style="font-size:11px;"></td></tr>
+      <tr><td class="label" colspan="4">Stream 3 — La Mesa Dam PPP</td></tr>
+      <tr><td>Development milestone / PPP award</td><td class="right">—</td><td class="right">TBD</td><td class="right" style="font-size:11px;">Not included in base case</td></tr>
+      <tr class="total">
+        <td>🇵🇭 PHILIPPINES TOTAL (Solarvest Attributable)</td>
+        <td class="right">≈ RM 43–51M</td>
+        <td class="right">≈ RM 74–84M</td>
+        <td class="right" style="font-size:11px;">JV RM42.6M + SPV RM0–8M. La Mesa upside excluded.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="rev-table" style="margin-bottom:24px;">
+    <thead>
+      <tr>
+        <th style="width:35%;">Investment Required</th>
+        <th class="right" style="width:20%;">FY2027 (RM M)</th>
+        <th class="right" style="width:20%;">FY2028 (RM M)</th>
+        <th class="right" style="width:25%;">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="invest-row"><td>JVco registration &amp; legal setup</td><td class="right">RM 0.5M</td><td class="right">—</td><td class="right" style="font-size:11px;">One-off</td></tr>
+      <tr class="invest-row"><td>JVco working capital (initial injection)</td><td class="right">RM 2.0M</td><td class="right">RM 1.5M</td><td class="right" style="font-size:11px;">Operational</td></tr>
+      <tr class="invest-row"><td>Utility SPV — site acquisition</td><td class="right">RM 10.1M</td><td class="right">—</td><td class="right" style="font-size:11px;">USD 2.25M · USD 30/kWp</td></tr>
+      <tr class="invest-row"><td>Utility SPV — development costs</td><td class="right">—</td><td class="right">RM 16.9M</td><td class="right" style="font-size:11px;">USD 3.75M · USD 50/kWp</td></tr>
+      <tr class="invest-row"><td>La Mesa PPP — upfront deposit</td><td class="right">RM 2.25M</td><td class="right">RM 1.0M</td><td class="right" style="font-size:11px;">USD 500K initial + ongoing</td></tr>
+      <tr class="invest-row"><td>Philippines BU staffing &amp; BD</td><td class="right">RM 1.5M</td><td class="right">RM 1.5M</td><td class="right" style="font-size:11px;">Regional team support</td></tr>
+      <tr class="invest-total">
+        <td><strong>TOTAL INVESTMENT</strong></td>
+        <td class="right"><strong>≈ RM 16.4M</strong></td>
+        <td class="right"><strong>≈ RM 20.9M</strong></td>
+        <td class="right"><strong>2-year total: RM 37.3M</strong></td>
+      </tr>
+      <tr class="net-row">
+        <td><strong>NET (Revenue less Investment)</strong></td>
+        <td class="right"><strong>(RM 8–11M)</strong></td>
+        <td class="right"><strong>RM 34–44M</strong></td>
+        <td class="right"><strong>Cumulative 2-year positive</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid-3">
+    <div style="background:var(--teal-pale);border:1px solid rgba(26,107,114,0.2);border-radius:10px;padding:16px;text-align:center;">
+      <div style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;margin-bottom:8px;">2-Year ROI</div>
+      <div style="font-size:28px;font-weight:800;color:var(--teal);">~5×</div>
+      <div style="font-size:11px;color:var(--gray-600);">Revenue/Investment base case</div>
+    </div>
+    <div style="background:var(--green-pale);border:1px solid rgba(46,125,82,0.2);border-radius:10px;padding:16px;text-align:center;">
+      <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:8px;">FY28 Annualised</div>
+      <div style="font-size:28px;font-weight:800;color:var(--green);">RM 74M+</div>
+      <div style="font-size:11px;color:var(--gray-600);">Run rate at steady state</div>
+    </div>
+    <div style="background:var(--gold-pale);border:1px solid rgba(200,146,26,0.2);border-radius:10px;padding:16px;text-align:center;">
+      <div style="font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">La Mesa Upside</div>
+      <div style="font-size:28px;font-weight:800;color:var(--gold);">RM 2.9B</div>
+      <div style="font-size:11px;color:var(--gray-600);">EPC value if awarded (1 GWp)</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 6: MILESTONES
+══════════════════════════════════════════════════════ -->
+<div id="tab-timeline" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon teal">📅</div>
+    <div>
+      <div class="section-title">Key Milestones &amp; Timeline</div>
+      <div class="section-desc">FY2027–FY2028 execution roadmap across all three streams</div>
+    </div>
+  </div>
+
+  <div class="timeline-wrapper">
+    <div class="timeline-grid">
+      <!-- Row 0: FY headers -->
+      <div class="tg-header" style="background:var(--navy);"></div>
+      <div class="tg-fy-header">FY2027 (Apr 2026 – Mar 2027)</div>
+      <div class="tg-fy-header" style="background:var(--teal);">FY2028 (Apr 2027 – Mar 2028)</div>
+
+      <!-- Row 1: Quarter headers -->
+      <div class="tg-header" style="background:var(--navy);"></div>
+      <div class="tg-header">Q1 Apr–Jun</div>
+      <div class="tg-header">Q2 Jul–Sep</div>
+      <div class="tg-header">Q3 Oct–Dec</div>
+      <div class="tg-header">Q4 Jan–Mar</div>
+      <div class="tg-header">Q1 Apr–Jun</div>
+      <div class="tg-header">Q2 Jul–Sep</div>
+      <div class="tg-header">Q3 Oct–Dec</div>
+      <div class="tg-header">Q4 Jan–Mar</div>
+
+      <!-- Section: JV -->
+      <div class="tg-section-label">🏘️ BAYANWEST JV — Rooftop C&amp;I + Residential</div>
+
+      <div class="tg-row-label">⚖️ Legal Setup</div>
+      <div class="tg-cell active"><span class="tg-milestone">JVco reg.</span></div>
+      <div class="tg-cell active"><span class="tg-milestone">Shareholder agreement</span></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+
+      <div class="tg-row-label">👥 Team Build</div>
+      <div class="tg-cell active"><span class="tg-milestone">Hire GM</span></div>
+      <div class="tg-cell active"><span class="tg-milestone">Sales + Eng hired</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Full 17 staff</span></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+
+      <div class="tg-row-label">💼 C&amp;I Pipeline</div>
+      <div class="tg-cell active"><span class="tg-milestone">BD begins</span></div>
+      <div class="tg-cell active"><span class="tg-milestone">First C&amp;I signed</span></div>
+      <div class="tg-cell active"><span class="tg-milestone">PHP 35M</span></div>
+      <div class="tg-cell active"><span class="tg-milestone">PHP 50M</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PHP 130M</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PHP 160M</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PHP 185M</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PHP 200M</span></div>
+
+      <div class="tg-row-label">🏠 Residential</div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell active"><span class="tg-milestone">Pilot launch</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Scale up</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Full ramp</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">SS hit</span></div>
+      <div class="tg-cell active-green"></div>
+
+      <!-- Section: SPV -->
+      <div class="tg-section-label">⚡ UTILITY SCALE SPV — 75 MWp Development</div>
+
+      <div class="tg-row-label">🏗️ SPV Setup</div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">SPV incorp.</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">Dev team hired</span></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+
+      <div class="tg-row-label">🗺️ Site Acquisition</div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">Site ID begins</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">25 MWp secured</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">50 MWp secured</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">75 MWp ✅</span></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell"></div>
+
+      <div class="tg-row-label">📋 Permitting</div>
+      <div class="tg-cell"></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">EIA submit</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">Grid study</span></div>
+      <div class="tg-cell active-orange"><span class="tg-milestone orange">PPA negotiation</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">EIA approval</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PPA signed</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">RTB achieved</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Flip + EPC</span></div>
+
+      <!-- Section: La Mesa -->
+      <div class="tg-section-label">💧 LA MESA DAM — 1 GWp Floating Solar PPP</div>
+
+      <div class="tg-row-label">🤝 MWSS Engagement</div>
+      <div class="tg-cell active-gold"><span class="tg-milestone gold">USD 500K</span></div>
+      <div class="tg-cell active-gold"><span class="tg-milestone gold">MOU signed</span></div>
+      <div class="tg-cell active-gold"><span class="tg-milestone gold">Feasibility</span></div>
+      <div class="tg-cell active-gold"><span class="tg-milestone gold">PPP proposal</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">PPP submission</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Evaluation</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone green">Award 🎯</span></div>
+      <div class="tg-cell active-green"><span class="tg-milestone navy">Dev agreement</span></div>
+
+    </div>
+  </div>
+
+  <div style="margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-600);">
+      <div style="width:16px;height:16px;background:var(--teal-pale);border-radius:3px;border:1px solid rgba(26,107,114,0.3);"></div>
+      Bayanwest JV milestones
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-600);">
+      <div style="width:16px;height:16px;background:var(--green-pale);border-radius:3px;border:1px solid rgba(46,125,82,0.3);"></div>
+      FY28 delivery milestones
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-600);">
+      <div style="width:16px;height:16px;background:var(--orange-pale);border-radius:3px;border:1px solid rgba(211,84,0,0.3);"></div>
+      Utility SPV milestones
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-600);">
+      <div style="width:16px;height:16px;background:var(--gold-pale);border-radius:3px;border:1px solid rgba(200,146,26,0.3);"></div>
+      La Mesa PPP milestones
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 7: RISKS
+══════════════════════════════════════════════════════ -->
+<div id="tab-risks" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--red-pale);">⚠️</div>
+    <div>
+      <div class="section-title">Risk Register</div>
+      <div class="section-desc">Key risks across all three Philippines business streams with mitigation actions</div>
+    </div>
+  </div>
+
+  <table class="risk-table">
+    <thead>
+      <tr>
+        <th style="width:5%;">#</th>
+        <th style="width:8%;">Stream</th>
+        <th style="width:28%;">Risk</th>
+        <th style="width:8%;">Likelihood</th>
+        <th style="width:8%;">Impact</th>
+        <th style="width:8%;">Rating</th>
+        <th style="width:35%;">Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R1</td>
+        <td>JV</td>
+        <td><strong>JVco legal structure delay</strong> — shareholder agreement takes longer than expected, delaying JVco registration and Q2/Q3 operations</td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>Engage Philippines corporate legal counsel immediately. Target JVco registration by end of June 2026. Flag to MD as critical path item.</td>
+      </tr>
+      <tr>
+        <td>R2</td>
+        <td>JV</td>
+        <td><strong>Economic vs. legal interest misalignment</strong> — Bayanwest (60% legal) challenges Solarvest's 65% economic interest at a later stage</td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>Ensure SHA explicitly documents economic interest split, dividend waterfall, and technical service fees. Paul + MD alignment confirmed at April 21 meeting is a positive signal.</td>
+      </tr>
+      <tr>
+        <td>R3</td>
+        <td>JV</td>
+        <td><strong>Project engineering capacity overload</strong> — 4 engineers insufficient at full PHP 875M volume (flagged in Bayanwest's own plan)</td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>Pre-approve headcount expansion plan. Target hiring 2 additional project engineers by Q3 FY27 ahead of scale-up. Solarvest can second engineers from Malaysia/Taiwan as interim support.</td>
+      </tr>
+      <tr>
+        <td>R4</td>
+        <td>SPV</td>
+        <td><strong>Grid interconnection queue delays</strong> — NGCP (National Grid Corporation Philippines) has known backlogs for large solar projects</td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>Prioritise projects with existing grid connection proximity. Engage NGCP early with multiple sites. Consider battery storage component to fast-track approvals. Accept FY28 RTB milestone may slip to FY29 for some projects.</td>
+      </tr>
+      <tr>
+        <td>R5</td>
+        <td>SPV</td>
+        <td><strong>75 MWp acquisition pipeline quality</strong> — securing viable sites at USD 30/kWp proves difficult; projects have encumbrances or poor solar resource</td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td>Hire Philippines-based project development manager with NGCP/DOE network. Prioritise brownfield sites (industrial, former mining). Target 100 MWp pipeline to filter down to 75 MWp quality projects.</td>
+      </tr>
+      <tr>
+        <td>R6</td>
+        <td>La Mesa</td>
+        <td><strong>PPP timeline slippage</strong> — government processes slow; La Mesa Dam PPP takes 2–3 years instead of 1 year, pushing revenue to FY29/FY30</td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td>La Mesa is NOT in base revenue projection — treat as pure upside. USD 500K is a positioning investment, not a committed project. Exit criteria: if no MOU with MWSS by Q4 FY27, reassess commitment.</td>
+      </tr>
+      <tr>
+        <td>R7</td>
+        <td>La Mesa</td>
+        <td><strong>Environmental / water source conflict</strong> — La Mesa Dam is a water supply reservoir; floating solar may face opposition from environmental groups or NWRB</td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td>Commission environmental pre-feasibility study as part of initial engagement. Engage MWSS, NWRB, DENR simultaneously. Frame floating solar as water evaporation reduction benefit (not just power generation).</td>
+      </tr>
+      <tr>
+        <td>R8</td>
+        <td>All</td>
+        <td><strong>FX exposure (PHP/USD/MYR three-way)</strong> — PHP depreciation reduces RM-equivalent revenue; USD cost inflation on SPV acquisitions</td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td>Negotiate USD-denominated contracts where possible for utility projects. JV C&amp;I contracts in PHP — natural hedge via PHP costs. Request Group Treasury guidance on hedging policy for overseas markets.</td>
+      </tr>
+      <tr>
+        <td>R9</td>
+        <td>All</td>
+        <td><strong>Key man risk — Paul (Bayanwest)</strong> — entire Philippines government/utility network depends on Paul's personal relationships</td>
+        <td><span class="risk-badge risk-low">Low</span></td>
+        <td><span class="risk-badge risk-high">High</span></td>
+        <td><span class="risk-badge risk-medium">Medium</span></td>
+        <td>Ensure Solarvest staff are co-present at all key meetings to build parallel relationships. JVco agreement should include non-compete/exit provisions. Develop secondary contacts within Bayanwest team.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     TAB: ORG CHART
+══════════════════════════════════════════════════════ -->
+<div id="tab-org" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon teal">🏢</div>
+    <div>
+      <div class="section-title">JVco Organisation Chart — 17 Headcount</div>
+      <div class="section-desc">Bayanwest JVco structure · Philippines C&amp;I + Residential rooftop operations</div>
+    </div>
+  </div>
+
+  <style>
+    .oc-wrap { overflow-x: auto; padding: 8px 0 24px; }
+    .oc-tree { min-width: 820px; }
+    /* ── level rows ── */
+    .oc-row { display: flex; justify-content: center; position: relative; }
+    .oc-row + .oc-row { margin-top: 0; }
+    /* ── connector lines ── */
+    .oc-connectors { display: flex; justify-content: center; height: 28px; position: relative; }
+    .oc-down { width: 2px; background: var(--gray-400); margin: 0 auto; height: 100%; }
+    .oc-branch-wrap { display: flex; justify-content: center; height: 28px; }
+    .oc-branch {
+      display: flex; align-items: flex-end;
+      border-top: 2px solid var(--gray-400);
+      height: 50%;
+    }
+    .oc-branch-stem { width: 2px; background: var(--gray-400); height: 50%; margin: 0 auto; }
+    /* ── nodes ── */
+    .oc-node {
+      background: white;
+      border-radius: 10px;
+      border: 2px solid var(--gray-300, #CBD5E1);
+      padding: 10px 14px;
+      text-align: center;
+      min-width: 120px;
+      max-width: 150px;
+      position: relative;
+    }
+    .oc-node.top { border-color: var(--navy); background: var(--navy); color: white; min-width: 160px; }
+    .oc-node.top .oc-title { color: white; }
+    .oc-node.top .oc-sub { color: rgba(255,255,255,0.7); }
+    .oc-node.manager { border-color: var(--teal); background: var(--teal-pale); }
+    .oc-node.manager .oc-title { color: var(--teal); }
+    .oc-node.ops-mgr { border-color: var(--orange); background: var(--orange-pale); }
+    .oc-node.ops-mgr .oc-title { color: var(--orange); }
+    .oc-node.staff { border-color: var(--gray-200); background: var(--gray-50); }
+    .oc-node.warn { border-color: var(--orange); background: var(--orange-pale); }
+    .oc-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+    .oc-sub { font-size: 10px; color: var(--gray-600); margin-top: 3px; line-height: 1.3; }
+    .oc-count {
+      display: inline-block;
+      background: var(--teal);
+      color: white;
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+    .oc-count.orange { background: var(--orange); }
+    .oc-count.green { background: var(--green); }
+    .oc-count.navy { background: var(--navy); }
+    .oc-group { display: flex; flex-direction: column; align-items: center; }
+    .oc-siblings { display: flex; gap: 12px; align-items: flex-start; }
+    .oc-col { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    /* H-bar connecting siblings */
+    .h-bar-wrap { display: flex; align-items: flex-start; }
+    .h-bar { border-top: 2px solid var(--gray-400); flex: 1; margin-top: 14px; }
+    .v-stub { width: 2px; background: var(--gray-400); height: 14px; margin: 0 auto; }
+  </style>
+
+  <div class="oc-wrap">
+    <div class="oc-tree">
+
+      <!-- ── LEVEL 1: General Manager ── -->
+      <div class="oc-row">
+        <div class="oc-node top">
+          <div class="oc-title">General Manager</div>
+          <div class="oc-sub">JVco Leadership<br>Bayanwest + Solarvest</div>
+          <span class="oc-count navy">1 pax</span>
+        </div>
+      </div>
+
+      <!-- down stem -->
+      <div style="display:flex;justify-content:center;height:20px;">
+        <div style="width:2px;background:var(--gray-400);height:100%;"></div>
+      </div>
+
+      <!-- horizontal bar across 3 managers -->
+      <div style="display:flex;justify-content:center;align-items:flex-start;">
+        <!-- left arm to Ops -->
+        <div style="width:200px;border-top:2px solid var(--gray-400);margin-top:0;"></div>
+        <!-- center drop to Sales -->
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div style="width:2px;background:var(--gray-400);height:20px;"></div>
+        </div>
+        <!-- right arm to Finance -->
+        <div style="width:200px;border-top:2px solid var(--gray-400);margin-top:0;"></div>
+      </div>
+
+      <!-- ── LEVEL 2: 3 Department Managers ── -->
+      <div style="display:flex;justify-content:center;gap:0;align-items:flex-start;margin-top:0;">
+
+        <!-- OPS column -->
+        <div style="display:flex;flex-direction:column;align-items:center;width:240px;">
+          <div style="width:2px;background:var(--gray-400);height:0;"></div>
+          <div class="oc-node ops-mgr" style="border-color:var(--orange);">
+            <div class="oc-title" style="color:var(--orange);">Operations Manager</div>
+            <div class="oc-sub">Project delivery<br>Technical oversight</div>
+            <span class="oc-count orange">1 pax</span>
+          </div>
+          <!-- down from ops -->
+          <div style="width:2px;background:var(--gray-400);height:16px;"></div>
+          <!-- h-bar across 3 ops sub-teams -->
+          <div style="display:flex;align-items:flex-start;width:220px;">
+            <div style="flex:1;border-top:2px solid var(--gray-400);margin-top:0;"></div>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:2px;background:var(--gray-400);height:14px;"></div>
+            </div>
+            <div style="flex:1;border-top:2px solid var(--gray-400);margin-top:0;"></div>
+          </div>
+          <!-- ops sub-nodes -->
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-top:0;">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:2px;background:var(--gray-400);height:0;"></div>
+              <div class="oc-node warn" style="min-width:100px;max-width:110px;">
+                <div class="oc-title" style="font-size:11px;color:var(--orange);">Project Engineers</div>
+                <div class="oc-sub">C&amp;I + Resi execution</div>
+                <span class="oc-count orange">4 pax ⚠️</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:2px;background:var(--gray-400);height:0;"></div>
+              <div class="oc-node staff" style="min-width:100px;max-width:110px;">
+                <div class="oc-title" style="font-size:11px;">Installation &amp; Technical</div>
+                <div class="oc-sub">Site works, QA/QC</div>
+                <span class="oc-count">2 pax</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:2px;background:var(--gray-400);height:0;"></div>
+              <div class="oc-node staff" style="min-width:100px;max-width:110px;">
+                <div class="oc-title" style="font-size:11px;">Procurement &amp; Supply Chain</div>
+                <div class="oc-sub">Materials, logistics</div>
+                <span class="oc-count">2 pax</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPACER -->
+        <div style="width:40px;"></div>
+
+        <!-- SALES column -->
+        <div style="display:flex;flex-direction:column;align-items:center;width:160px;">
+          <div class="oc-node manager">
+            <div class="oc-title">Sales &amp; BD Manager</div>
+            <div class="oc-sub">C&amp;I + Residential pipeline</div>
+            <span class="oc-count">1 pax</span>
+          </div>
+          <div style="width:2px;background:var(--gray-400);height:16px;"></div>
+          <div class="oc-node staff" style="min-width:130px;">
+            <div class="oc-title" style="font-size:11px;">Sales Officers</div>
+            <div class="oc-sub">Pipeline generation<br>3,600 leads needed</div>
+            <span class="oc-count green">3 pax</span>
+          </div>
+        </div>
+
+        <!-- SPACER -->
+        <div style="width:40px;"></div>
+
+        <!-- FINANCE column -->
+        <div style="display:flex;flex-direction:column;align-items:center;width:160px;">
+          <div class="oc-node manager">
+            <div class="oc-title">Finance &amp; Admin Manager</div>
+            <div class="oc-sub">Accounts, compliance, HR</div>
+            <span class="oc-count">1 pax</span>
+          </div>
+          <div style="width:2px;background:var(--gray-400);height:16px;"></div>
+          <div class="oc-node staff" style="min-width:130px;">
+            <div class="oc-title" style="font-size:11px;">Finance &amp; Admin Support</div>
+            <div class="oc-sub">Bookkeeping, admin, HR support</div>
+            <span class="oc-count green">2 pax</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.oc-tree -->
+  </div><!-- /.oc-wrap -->
+
+  <!-- Headcount summary -->
+  <div style="margin-top:24px;">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;">👥 Headcount Summary</div>
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th class="right">Headcount</th>
+          <th>Key Responsibilities</th>
+          <th class="right">Flag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>General Manager</td><td class="right">1</td><td style="font-size:12px;">JVco leadership, P&amp;L ownership, Solarvest–Bayanwest coordination</td><td class="right">—</td></tr>
+        <tr><td>Operations Manager</td><td class="right">1</td><td style="font-size:12px;">Project delivery oversight, technical standards, subcon management</td><td class="right">—</td></tr>
+        <tr><td>Project Engineers</td><td class="right">4</td><td style="font-size:12px;">C&amp;I + residential design, permitting, site supervision (1,040 projects/year)</td><td class="right"><span style="color:var(--orange);font-weight:700;font-size:11px;">⚠️ Capacity risk at full volume</span></td></tr>
+        <tr><td>Installation &amp; Technical</td><td class="right">2</td><td style="font-size:12px;">On-site installation quality, commissioning, after-sales</td><td class="right">—</td></tr>
+        <tr><td>Procurement &amp; Supply Chain</td><td class="right">2</td><td style="font-size:12px;">Panel/inverter sourcing, logistics, inventory management</td><td class="right">—</td></tr>
+        <tr><td>Sales &amp; BD Manager</td><td class="right">1</td><td style="font-size:12px;">C&amp;I pipeline (267 targets) + residential pipeline (3,333 targets)</td><td class="right">—</td></tr>
+        <tr><td>Sales Officers</td><td class="right">3</td><td style="font-size:12px;">Lead generation, site visits, proposals — needs to manage 3,600 pipeline</td><td class="right"><span style="color:var(--gold);font-weight:700;font-size:11px;">⚡ High BD volume</span></td></tr>
+        <tr><td>Finance &amp; Admin Manager</td><td class="right">1</td><td style="font-size:12px;">JVco accounts, BIR compliance, intercompany reporting to Solarvest</td><td class="right">—</td></tr>
+        <tr><td>Finance &amp; Admin Support</td><td class="right">2</td><td style="font-size:12px;">Bookkeeping, payroll, admin, HR support</td><td class="right">—</td></tr>
+        <tr class="total"><td><strong>Total JVco Headcount</strong></td><td class="right"><strong>17 pax</strong></td><td><strong>Full-year target: PHP 875M / 1,040 projects / 25 MWp</strong></td><td class="right">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div style="background:var(--orange-pale);border:1px solid rgba(211,84,0,0.25);border-radius:8px;padding:14px;font-size:12px;color:#7A3300;">
+      <strong>⚠️ Project Engineer Capacity Risk</strong><br>
+      4 engineers × 1,040 projects = 260 projects/engineer/year. Even with residential being small (5 kWp), the 40 C&amp;I projects at 500 kWp each = 10 large projects per engineer simultaneously. Recommend pre-approving hire of 2 additional engineers before PHP 875M run-rate is hit. Solarvest Malaysia can second 1–2 engineers as bridge support.
+    </div>
+    <div style="background:var(--gold-pale);border:1px solid rgba(200,146,26,0.25);border-radius:8px;padding:14px;font-size:12px;color:#7A5800;">
+      <strong>⚡ Sales Pipeline Volume</strong><br>
+      4 sales staff (1 manager + 3 officers) need to generate and manage 3,600 leads to close 1,040 projects. That is 900 leads per sales person. Highly dependent on Bayanwest's existing network and referral pipeline — not a cold-start problem if Bayanwest already has C&amp;I relationships in market.
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 8: MD ASK
+══════════════════════════════════════════════════════ -->
+<div id="tab-ask" class="tab-content">
+
+  <div class="section-header">
+    <div class="section-icon navy">🎯</div>
+    <div>
+      <div class="section-title">What We Need from Leadership</div>
+      <div class="section-desc">Specific decisions and approvals required to execute the Philippines 2-year plan</div>
+    </div>
+  </div>
+
+  <div class="ask-card">
+    <div class="ask-title">🎯 Three Critical Asks — Philippines</div>
+    <div class="ask-items">
+      <div class="ask-item">
+        <div class="ask-number">01</div>
+        <div class="ask-label">Approve JVco Structure</div>
+        <div class="ask-detail">Endorse Solarvest 40% legal / 65% economic ownership in Bayanwest JVco. Mandate legal counsel to finalise SHA by June 2026. JVco registration is the critical path for all FY27 C&amp;I revenue.</div>
+      </div>
+      <div class="ask-item">
+        <div class="ask-number">02</div>
+        <div class="ask-label">Approve RM 16M FY27 Philippines Investment</div>
+        <div class="ask-detail">Utility SPV: RM 10.1M (USD 2.25M) · La Mesa deposit: RM 2.25M (USD 500K) · JVco setup: RM 2.5M · BD/Staff: RM 1.5M. This is the seed investment that unlocks RM 55–70M FY28 revenue.</div>
+      </div>
+      <div class="ask-item">
+        <div class="ask-number">03</div>
+        <div class="ask-label">Greenlight La Mesa USD 500K</div>
+        <div class="ask-detail">Commit USD 500K from new La Mesa SPV (Solarvest majority) to MWSS as formal expression of interest. This is a high-risk, transformative bet. If PPP awarded, EPC upside is RM 2.9B over 5 years. Decision needed by May 2026.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-header" style="background:var(--green-pale);"><span class="card-title" style="color:var(--green);">✅ What Leadership Has Already Done</span></div>
+      <div class="card-body">
+        <div style="font-size:12px;line-height:1.8;color:var(--gray-700);">
+          ✅ MD present and endorsed at Bayanwest April 21 meeting<br>
+          ✅ Philippines confirmed as Accelerate priority market<br>
+          ✅ Concept of JV with Bayanwest agreed in principle<br>
+          ✅ Utility Scale SPV concept understood and supported<br>
+          ✅ La Mesa Dam PPP opportunity introduced and acknowledged
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" style="background:var(--orange-pale);"><span class="card-title" style="color:var(--orange);">⚡ What's Needed Next (May 2026)</span></div>
+      <div class="card-body">
+        <div style="font-size:12px;line-height:1.8;color:var(--gray-700);">
+          🔲 SHA negotiation with Bayanwest — mandate legal team<br>
+          🔲 MWSS engagement — Paul to arrange formal meeting<br>
+          🔲 Utility SPV — appoint Philippines project development lead<br>
+          🔲 Budget approval — RM 16M Philippines FY27 capex<br>
+          🔲 Group Finance — clarify JV consolidation vs equity accounting treatment
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px;background:var(--navy);color:white;border-radius:12px;padding:20px;">
+    <div style="font-size:14px;font-weight:700;margin-bottom:12px;">📊 The Investment Case in One Sentence</div>
+    <div style="font-size:13px;line-height:1.7;color:rgba(255,255,255,0.85);">
+      Invest <strong style="color:#2A9BA5;">RM 37M over 2 years</strong> into the Philippines market via three complementary vehicles (Bayanwest JV + Utility SPV + La Mesa PPP) to generate <strong style="color:#3D9B6A;">RM 55–70M/year of attributable revenue by FY2028</strong> — positioning Philippines as Solarvest's single largest overseas market, contributing significantly to the Group's <strong>RM 200M overseas target</strong>, and seeding a transformative pipeline that could deliver <strong style="color:#C8921A;">RM 2.9B of EPC value</strong> from La Mesa alone.
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<div style="background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:16px;font-size:11px;margin-top:32px;">
+  Philippines 2-Year Strategic Plan · Solarvest Overseas Markets · Prepared April 2026 · JJ (Regional Director) · Working document — for internal discussion only
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
