@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indonesia BU — Strategy Update & AOP Alignment FY2027</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0E2841;
+      --purple: #A02B93;
+      --orange: #E97132;
+      --blue:   #156082;
+      --lblue:  #0F9ED5;
+      --gray:   #E8E8E8;
+      --text:   #1a1a1a;
+      --muted:  #6b7280;
+      --white:  #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f6f8;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3f62 60%, var(--blue) 100%);
+      color: var(--white);
+      padding: 72px 48px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px; top: -80px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: rgba(160,43,147,0.12);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .hero-meta-item strong {
+      display: block;
+      font-size: 14px;
+      color: var(--white);
+      font-weight: 600;
+    }
+    .confidential-badge {
+      position: absolute;
+      bottom: 24px; right: 48px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── NAV PILLS ── */
+    .nav-pills {
+      background: var(--white);
+      border-bottom: 1px solid #e2e5ea;
+      padding: 0 48px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .nav-pills a {
+      display: inline-block;
+      padding: 16px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .nav-pills a:hover { color: var(--navy); border-bottom-color: var(--purple); }
+
+    /* ── WRAPPER ── */
+    .page { max-width: 1000px; margin: 0 auto; padding: 0 32px 80px; }
+
+    /* ── SECTIONS ── */
+    section { padding-top: 56px; }
+
+    .section-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .section-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 680px;
+    }
+    .divider {
+      width: 48px; height: 4px;
+      background: linear-gradient(90deg, var(--purple), var(--orange));
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px 20px;
+      border-top: 4px solid var(--lblue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .stat-card.orange { border-top-color: var(--orange); }
+    .stat-card.purple { border-top-color: var(--purple); }
+    .stat-card.navy   { border-top-color: var(--navy); }
+    .stat-card.red    { border-top-color: #dc2626; }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .flag-red { color: #dc2626; font-weight: 700; }
+    .flag-orange { color: var(--orange); font-weight: 700; }
+
+    /* ── CHALLENGE BLOCK ── */
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .challenge-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 5px solid #dc2626;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .challenge-card h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .challenge-card p {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* ── PILLARS ── */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+    .pillar-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 22px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+    .pillar-card:hover { transform: translateY(-3px); }
+    .pillar-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 8px;
+    }
+    .pillar-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .pillar-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .pillar-card ul li {
+      font-size: 13px;
+      color: #374151;
+      padding: 5px 0;
+      border-bottom: 1px solid #f3f4f6;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .pillar-card ul li:last-child { border-bottom: none; }
+    .pillar-card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* ── INSIGHT BOX ── */
+    .insight-box {
+      background: linear-gradient(135deg, #fff7ed, #fff);
+      border: 1.5px solid var(--orange);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0 28px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .insight-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .insight-box h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .insight-box p {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 28px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead tr {
+      background: var(--navy);
+      color: var(--white);
+    }
+    thead th {
+      padding: 14px 18px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    tbody tr { border-bottom: 1px solid #f3f4f6; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #fafbfc; }
+    tbody td {
+      padding: 13px 18px;
+      font-size: 13px;
+      color: #374151;
+    }
+    tbody td:first-child { font-weight: 600; color: var(--navy); }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-green  { background: #dcfce7; color: #166534; }
+    .badge-orange { background: #fff7ed; color: #c2410c; }
+    .badge-red    { background: #fee2e2; color: #991b1b; }
+    .badge-blue   { background: #e0f2fe; color: #075985; }
+    .badge-gray   { background: #f3f4f6; color: #374151; }
+
+    /* ── DECISION CARDS ── */
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .decision-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 5px solid var(--purple);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .decision-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .decision-card .decision-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .decision-card p {
+      font-size: 13px;
+      color: #374151;
+      line-height: 1.6;
+    }
+    .decision-card .ask {
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: #fdf4ff;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--purple);
+    }
+
+    /* ── AOP COMPARISON ── */
+    .aop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) { .aop-grid { grid-template-columns: 1fr; } }
+    .aop-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    .aop-card-header {
+      padding: 16px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .aop-card-header.current { background: #f3f4f6; color: var(--muted); }
+    .aop-card-header.proposed { background: var(--navy); color: var(--white); }
+    .aop-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 13px;
+    }
+    .aop-row:last-child { border-bottom: none; }
+    .aop-row-label { color: var(--muted); font-weight: 500; }
+    .aop-row-value { font-weight: 700; color: var(--navy); }
+    .aop-row-value.flag { color: #dc2626; }
+    .aop-row-value.good { color: #166534; }
+
+    /* ── NEXT STEPS ── */
+    .steps-list {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px 24px;
+      border-bottom: 1px solid #f3f4f6;
+      align-items: flex-start;
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .step-owner {
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      padding: 24px 48px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-top: 60px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 24px 40px; }
+      .hero h1 { font-size: 26px; }
+      .nav-pills { padding: 0 16px; }
+      .page { padding: 0 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-eyebrow">Solarvest Holdings Berhad · Regional Business Division</div>
+  <h1>Indonesia BU —<br><span>Strategy Update</span> &<br>AOP Alignment</h1>
+  <p class="hero-sub">
+    FY2027 Strategic Direction based on in-market assessment by Country Manager Pak Denny.
+    For management review and decision.
+  </p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <strong>June 2026</strong>
+      Prepared
+    </div>
+    <div class="hero-meta-item">
+      <strong>Regional &amp; Exco</strong>
+      Audience
+    </div>
+    <div class="hero-meta-item">
+      <strong>PT Lembaga Tenaga Indonesia</strong>
+      Entity
+    </div>
+    <div class="hero-meta-item">
+      <strong>FY2027 AOP</strong>
+      Reference
+    </div>
+  </div>
+  <div class="confidential-badge">Private &amp; Confidential</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════════════ -->
+<nav class="nav-pills">
+  <a href="#snapshot">Snapshot</a>
+  <a href="#challenge">The Challenge</a>
+  <a href="#strategy">Our Strategy</a>
+  <a href="#ppa">PPA Approach</a>
+  <a href="#utility">Utility</a>
+  <a href="#decisions">Decisions Required</a>
+  <a href="#aop">AOP Alignment</a>
+  <a href="#nextsteps">Next Steps</a>
+</nav>
+
+<div class="page">
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 1: SNAPSHOT
+  ═══════════════════════════════════════════════════ -->
+  <section id="snapshot">
+    <div class="section-eyebrow">Section 01</div>
+    <div class="section-title">Indonesia at a Glance</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Current AOP baseline for Indonesia BU (FY2027), as reviewed and flagged by Finance.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-label">Revenue (FY2027 AOP)</div>
+        <div class="stat-value">MYR 22.9M</div>
+        <div class="stat-note">12-month budget</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">Gross Profit Margin</div>
+        <div class="stat-value flag-red">14.7%</div>
+        <div class="stat-note flag-red">⚠ Finance: Too low</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">PAT Margin</div>
+        <div class="stat-value">7.1%</div>
+        <div class="stat-note">PAT MYR 1.63M</div>
+      </div>
+      <div class="stat-card navy">
+        <div class="stat-label">Headcount (IND)</div>
+        <div class="stat-value">7</div>
+        <div class="stat-note">Current approved HC</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Market Segment</th>
+            <th>Current Status</th>
+            <th>Model</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C&amp;I (Commercial &amp; Industrial)</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td>CAPEX / EPC</td>
+            <td>Primary focus — CAPEX only, PPA frozen</td>
+          </tr>
+          <tr>
+            <td>Utility Scale</td>
+            <td><span class="badge badge-blue">Developing</span></td>
+            <td>EPC / Dev</td>
+            <td>Smaller projects, dedicated BD needed</td>
+          </tr>
+          <tr>
+            <td>Off-Grid &amp; Hybrid</td>
+            <td><span class="badge badge-blue">Targeted</span></td>
+            <td>EPC</td>
+            <td>Identified as addressable segment</td>
+          </tr>
+          <tr>
+            <td>PPA (Power Purchase Agreement)</td>
+            <td><span class="badge badge-orange">Selective</span></td>
+            <td>PPA</td>
+            <td>Case by case — MNC &amp; large-cap only</td>
+          </tr>
+          <tr>
+            <td>Residential</td>
+            <td><span class="badge badge-red">No Touch</span></td>
+            <td>—</td>
+            <td>Out of scope entirely</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 2: THE CHALLENGE
+  ═══════════════════════════════════════════════════ -->
+  <section id="challenge">
+    <div class="section-eyebrow">Section 02</div>
+    <div class="section-title">The Challenge</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Three structural headwinds facing the Indonesia BU that the strategy must address.
+    </p>
+
+    <div class="challenge-grid">
+      <div class="challenge-card">
+        <h4>Low CAPEX Willingness</h4>
+        <p>
+          Only <strong>10–15%</strong> of the Indonesian solar market is willing to fund their own solar installation (CAPEX model). The majority of factory owners and offtakers are reluctant to put up upfront capital — making C&amp;I deal flow inherently constrained.
+        </p>
+      </div>
+      <div class="challenge-card">
+        <h4>GP Margin Under Pressure</h4>
+        <p>
+          Current AOP GP margin is <strong>14.7%</strong>, flagged by Finance as too low. The proposed strategy to reduce GP% further to win deals creates a direct tension that requires a deliberate management decision and trade-off approval.
+        </p>
+      </div>
+      <div class="challenge-card">
+        <h4>PPA Model Frozen</h4>
+        <p>
+          The PPA model, which typically enables broader market access, has been <strong>frozen</strong> for general C&amp;I deployment. This limits addressable market to the 10–15% CAPEX-willing segment unless financing solutions are introduced.
+        </p>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-icon">💡</div>
+      <div>
+        <h4>Strategic Insight</h4>
+        <p>
+          The constraints above are addressable — but only if we deliberately expand the CAPEX-willing pool through bank financing partnerships, and accept a short-term GP trade-off in exchange for higher win rates and market share. This is the core management decision.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 3: STRATEGIC RESPONSE
+  ═══════════════════════════════════════════════════ -->
+  <section id="strategy">
+    <div class="section-eyebrow">Section 03</div>
+    <div class="section-title">Our Strategic Response — C&amp;I</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Four integrated pillars to win the addressable CAPEX market and unlock new demand.
+    </p>
+
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="pillar-number">Pillar 01</div>
+        <h3>Win the CAPEX Market with Better ROI</h3>
+        <ul>
+          <li>Reduce EPC GP% to make offtaker ROI compelling</li>
+          <li>Target payback period <strong>&lt;5 years</strong> for clients</li>
+          <li>Post-payback: client enjoys ~15 years of free savings</li>
+          <li>Educate PPA-inclined clients on CAPEX attractiveness</li>
+        </ul>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">Pillar 02</div>
+        <h3>Build a Subcontractor Pool</h3>
+        <ul>
+          <li>Develop dedicated subcon network in Indonesia</li>
+          <li>Sign <strong>Blanket EPC Agreements</strong> upfront</li>
+          <li>Issue Work Orders per project under master contract</li>
+          <li>Reduce cost, speed up mobilisation, standardise terms</li>
+        </ul>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">Pillar 03</div>
+        <h3>Subcon GP Optimisation</h3>
+        <ul>
+          <li><strong>Option A:</strong> Reduce subcon GP% → offset with better payment terms</li>
+          <li><strong>Option B:</strong> Increase subcon GP% → attract better quality subcons → higher project delivery capability</li>
+          <li>Both options target overall cost reduction</li>
+        </ul>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">Pillar 04</div>
+        <h3>Bank Financing Partnerships</h3>
+        <ul>
+          <li>Engage local Indonesian banks for solar financing packages</li>
+          <li>Introduce financing options to CAPEX-hesitant clients</li>
+          <li><strong>Co-market with banks</strong> to reach more factories</li>
+          <li>Client value: <strong>~20% electricity savings</strong> over 25 years</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-icon">⚖️</div>
+      <div>
+        <h4>The GP Trade-Off — A Deliberate Choice</h4>
+        <p>
+          Reducing EPC GP% will push margin lower in the short term. However, this is a calculated move: a <strong>higher win rate on CAPEX deals</strong> grows total project volume, recovers absolute GP in aggregate, and builds long-term market presence. Management alignment on an acceptable GP floor is required before execution.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 4: PPA
+  ═══════════════════════════════════════════════════ -->
+  <section id="ppa">
+    <div class="section-eyebrow">Section 04</div>
+    <div class="section-title">PPA Model — Selective Approach</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      PPA is not fully abandoned. We retain optionality for the right clients.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Requirement</th>
+            <th>Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Client Type</td>
+            <td>MNC or large-cap local company</td>
+            <td>Stronger creditworthiness &amp; offtake reliability</td>
+          </tr>
+          <tr>
+            <td>Evaluation Basis</td>
+            <td>Case by case only</td>
+            <td>No blanket PPA pipeline — selective &amp; deliberate</td>
+          </tr>
+          <tr>
+            <td>General C&amp;I PPA</td>
+            <td><span class="badge badge-red">Frozen</span></td>
+            <td>Market conditions &amp; capital allocation priority</td>
+          </tr>
+          <tr>
+            <td>Decision Authority</td>
+            <td>Management approval per deal</td>
+            <td>Ensures capital discipline on each PPA commitment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 5: UTILITY
+  ═══════════════════════════════════════════════════ -->
+  <section id="utility">
+    <div class="section-eyebrow">Section 05</div>
+    <div class="section-title">Utility Strategy</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Indonesia has utility-scale opportunity — but requires focused resourcing and a structured development approach.
+    </p>
+
+    <div class="challenge-grid">
+      <div class="challenge-card" style="border-left-color: var(--blue);">
+        <h4 style="color: var(--blue);">Start with Smaller Projects</h4>
+        <p>
+          Focus on smaller-scale utility projects first to build track record, understand regulatory landscape, and reduce DEVEX risk. A DEVEX checklist will be developed to itemise all required pre-development expenditures per project.
+        </p>
+      </div>
+      <div class="challenge-card" style="border-left-color: var(--purple);">
+        <h4 style="color: var(--purple);">Dedicated Utility BD Hire</h4>
+        <p>
+          Hire <strong>1 dedicated Utility BD person</strong> specifically for utility project development and pipeline management. Current BD team is C&amp;I-focused and cannot carry utility development responsibilities concurrently.
+        </p>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-icon">📋</div>
+      <div>
+        <h4>DEVEX Checklist — To Be Developed</h4>
+        <p>
+          A detailed DEVEX (Development Expenditure) checklist needs to be compiled for each utility project — covering land agreements, grid interconnection, environmental permits, PLN approvals, and related pre-construction costs. This will inform go/no-go decisions and capital allocation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 6: DECISIONS REQUIRED
+  ═══════════════════════════════════════════════════ -->
+  <section id="decisions">
+    <div class="section-eyebrow">Section 06</div>
+    <div class="section-title">Management Decisions Required</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Three specific decisions needed from management to enable execution of this strategy.
+    </p>
+
+    <div class="decision-grid">
+      <div class="decision-card">
+        <h4>Decision 01 — Commercial</h4>
+        <div class="decision-title">Approve GP Reduction as a Win Strategy</div>
+        <p>
+          Endorse the deliberate reduction of EPC GP% to improve offtaker ROI and win rate in the 10–15% CAPEX-willing market. This requires setting an acceptable GP floor so the team can price competitively without eroding company economics.
+        </p>
+        <div class="ask">→ What is the minimum acceptable GP% for Indonesia C&amp;I EPC deals?</div>
+      </div>
+      <div class="decision-card">
+        <h4>Decision 02 — Headcount</h4>
+        <div class="decision-title">Approve Utility BD Headcount</div>
+        <p>
+          Approve the hiring of 1 dedicated Utility Business Development person for Indonesia. Current HC of 7 has no dedicated utility BD resource, which limits our ability to develop and convert utility pipeline in parallel with C&amp;I operations.
+        </p>
+        <div class="ask">→ Approve budget for 1 Utility BD hire in Indonesia?</div>
+      </div>
+      <div class="decision-card">
+        <h4>Decision 03 — AOP</h4>
+        <div class="decision-title">Endorse AOP Amendments</div>
+        <p>
+          The strategy shift — CAPEX-only C&amp;I, PPA frozen, new Utility BD, subcon pool development — requires corresponding adjustments to the FY2027 AOP. Revised targets for pipeline mix, GP margin assumptions, and headcount cost to be submitted post-alignment.
+        </p>
+        <div class="ask">→ Approve AOP revision scope and timeline for resubmission?</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 7: AOP ALIGNMENT
+  ═══════════════════════════════════════════════════ -->
+  <section id="aop">
+    <div class="section-eyebrow">Section 07</div>
+    <div class="section-title">AOP Alignment</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Current AOP baseline vs. proposed amendments following today's strategy discussion.
+    </p>
+
+    <div class="aop-grid">
+      <div class="aop-card">
+        <div class="aop-card-header current">Current AOP (FY2027)</div>
+        <div class="aop-row">
+          <span class="aop-row-label">Revenue</span>
+          <span class="aop-row-value">MYR 22.9M</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">GP Margin</span>
+          <span class="aop-row-value flag">14.7% ⚠</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">PAT Margin</span>
+          <span class="aop-row-value">7.1%</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Headcount (IND)</span>
+          <span class="aop-row-value">7</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">C&amp;I Model</span>
+          <span class="aop-row-value">CAPEX + PPA</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Utility BD</span>
+          <span class="aop-row-value flag">None</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Subcon Pool</span>
+          <span class="aop-row-value flag">Not formalised</span>
+        </div>
+      </div>
+      <div class="aop-card">
+        <div class="aop-card-header proposed">Proposed Amendment</div>
+        <div class="aop-row">
+          <span class="aop-row-label">Revenue</span>
+          <span class="aop-row-value">To be revised</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">GP Margin</span>
+          <span class="aop-row-value">To be set — pending GP floor decision</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">PAT Margin</span>
+          <span class="aop-row-value">To be revised</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Headcount (IND)</span>
+          <span class="aop-row-value good">8 (+ 1 Utility BD)</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">C&amp;I Model</span>
+          <span class="aop-row-value good">CAPEX only (PPA frozen)</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Utility BD</span>
+          <span class="aop-row-value good">1 dedicated hire</span>
+        </div>
+        <div class="aop-row">
+          <span class="aop-row-label">Subcon Pool</span>
+          <span class="aop-row-value good">Blanket EPC agreements</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-icon">📝</div>
+      <div>
+        <h4>Note on Revenue &amp; GP Targets</h4>
+        <p>
+          Revised revenue and GP targets will be submitted once the GP floor decision is made and the bank financing pipeline has been sized. The subcon pool cost reduction impact will also be quantified and reflected in the updated AOP model.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 8: NEXT STEPS
+  ═══════════════════════════════════════════════════ -->
+  <section id="nextsteps">
+    <div class="section-eyebrow">Section 08</div>
+    <div class="section-title">Next Steps</div>
+    <div class="divider"></div>
+    <p class="section-desc">
+      Immediate actions following management alignment.
+    </p>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Align on GP Floor for Indonesia C&amp;I EPC</h4>
+          <p>Management to define minimum acceptable GP% for Indonesia deals. This unlocks pricing parameters for Pak Denny's team to bid competitively.</p>
+          <div class="step-owner">Owner: Regional + Finance</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Initiate Utility BD Recruitment</h4>
+          <p>Upon headcount approval, commence recruitment of 1 Utility BD for Indonesia. Define JD and target profile aligned to Indonesia utility market requirements.</p>
+          <div class="step-owner">Owner: HR + Pak Denny</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Develop Subcontractor Pool &amp; Blanket EPC Template</h4>
+          <p>Pak Denny to identify and qualify subcon candidates in Indonesia. Legal to prepare Blanket EPC Agreement template with Work Order framework.</p>
+          <div class="step-owner">Owner: Pak Denny + Legal</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Identify &amp; Engage Local Bank Partners</h4>
+          <p>Map 2–3 target Indonesian banks with appetite for solar project financing. Develop co-marketing concept for client outreach. Explore SAM alignment for PPA-linked financing.</p>
+          <div class="step-owner">Owner: Pak Denny + BD Team</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Develop DEVEX Checklist for Utility Projects</h4>
+          <p>Compile a standardised DEVEX checklist covering all pre-development costs for Indonesian utility projects. To be used as go/no-go evaluation tool per opportunity.</p>
+          <div class="step-owner">Owner: Pak Denny + Project Team</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Revise &amp; Resubmit Indonesia AOP FY2027</h4>
+          <p>Incorporate all strategy amendments into the AOP model — revised pipeline, GP targets, +1 HC, subcon savings. Resubmit for Finance review and Board approval.</p>
+          <div class="step-owner">Owner: JJ + Pak Denny + Finance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page -->
+
+<footer>
+  Private &amp; Confidential · Solarvest Holdings Berhad · Indonesia BU Strategy FY2027 · June 2026
+</footer>
+
+</body>
+</html>
